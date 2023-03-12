@@ -15,8 +15,10 @@ class QuizViewController: UIViewController {
     var answeIndex = 0 //正解の番号
     
     @IBOutlet var leftNumberLabel: UILabel!
-    @IBOutlet var canterNumberLabel: UILabel!
+    @IBOutlet var centerNumberLabel: UILabel!
     @IBOutlet var rightNumberLabel: UILabel!
+    @IBOutlet var questionNumber: UILabel!
+    @IBOutlet var questionTotalNumber: UILabel!
     
     
     
@@ -24,6 +26,12 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         setQuestions()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultVC = segue.destination as? ResultViewController {
+            resultVC.result = Double(correct) / Double(total) * 100.0
+        }
     }
     
     @IBAction func tapped(sender: UIButton) {
@@ -43,8 +51,10 @@ class QuizViewController: UIViewController {
     
     func setQuestions() {
         //arc4random_uniform(Uint32)はランダムに括弧内の数値を選出する、Intで囲い数値に変換する
-        let leftNum = Int(arc4random_uniform(10))
-        var centerNum = Int(arc4random_uniform(10))
+        let leftNum = Int.random(in: 1 ... 10)
+//        let leftNum = Int(arc4random_uniform(10))
+        var centerNum = Int.random(in: 1 ... 10)
+//        var centerNum = Int(arc4random_uniform(10))
         
         answeIndex = Int(arc4random_uniform(4))
         switch answeIndex {
@@ -61,6 +71,9 @@ class QuizViewController: UIViewController {
             }
             rightNumberLabel.text = "\(leftNum / centerNum)"
         }
-        
+        leftNumberLabel.text = "\(leftNum)"
+        centerNumberLabel.text = "\(centerNum)"
+        questionNumber.text = "\(questionIndex + 1)"
+        questionTotalNumber.text = "\(total)"
     }
 }

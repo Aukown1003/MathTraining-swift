@@ -14,6 +14,7 @@
 		008F83EF29BD421200268E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008F83EE29BD421200268E15 /* Assets.xcassets */; };
 		008F83F229BD421200268E15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008F83F029BD421200268E15 /* LaunchScreen.storyboard */; };
 		008F83FA29BD4A2900268E15 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F83F929BD4A2900268E15 /* QuizViewController.swift */; };
+		008F83FC29BD54D000268E15 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F83FB29BD54D000268E15 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		008F83F129BD421200268E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008F83F329BD421200268E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008F83F929BD4A2900268E15 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		008F83FB29BD54D000268E15 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				008F83E929BD421100268E15 /* ViewController.swift */,
 				008F83EB29BD421100268E15 /* Main.storyboard */,
 				008F83F929BD4A2900268E15 /* QuizViewController.swift */,
+				008F83FB29BD54D000268E15 /* ResultViewController.swift */,
 				008F83EE29BD421200268E15 /* Assets.xcassets */,
 				008F83F029BD421200268E15 /* LaunchScreen.storyboard */,
 				008F83F329BD421200268E15 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008F83FC29BD54D000268E15 /* ResultViewController.swift in Sources */,
 				008F83EA29BD421100268E15 /* ViewController.swift in Sources */,
 				008F83E629BD421100268E15 /* AppDelegate.swift in Sources */,
 				008F83E829BD421100268E15 /* SceneDelegate.swift in Sources */,
